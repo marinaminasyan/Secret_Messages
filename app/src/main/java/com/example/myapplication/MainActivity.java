@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity implements OnClickListener {
 
     Button buttonSTART;
+    Button buttonAUTHOR;
 
     /** Called when the activity is first created. */
     @Override
@@ -21,6 +22,9 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
 
         buttonSTART = (Button) findViewById(R.id.buttonSTART);
         buttonSTART.setOnClickListener(this);
+
+        buttonAUTHOR = (Button) findViewById(R.id.buttonAUTHOR);
+        buttonAUTHOR.setOnClickListener(this);
     }
 
     @Override
@@ -31,6 +35,13 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
                 Intent intent = new Intent(this, AboutActivity.class);
                 startActivity(intent);
                 break;
+
+            case R.id.buttonAUTHOR:
+                // TODO Call THIRD activity
+                Intent intent1 = new Intent(this, AuthorActivity.class);
+                startActivity(intent1);
+                break;
+
             default:
                 break;
         }
